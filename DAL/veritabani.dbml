@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="staj" Class="veritabaniDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HASANKOC\SQLEXPRESS;Initial Catalog=staj;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="stajConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bolum" Member="Bolums">
+    <Type Name="Bolum">
+      <Column Name="bolum_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bolum_adi" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Association Name="Bolum_Kullanici" Member="Kullanicis" ThisKey="bolum_id" OtherKey="bolum_id" Type="Kullanici" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Yetkili" Member="Yetkilis">
+    <Type Name="Yetkili">
+      <Column Name="yetkili_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad_soyad" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="gorev" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="firma_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="yetkili_eposta" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Yetkili_Staj" Member="Stajs" ThisKey="yetkili_id" OtherKey="yetkili_id" Type="Staj" />
+      <Association Name="Firma_Yetkili" Member="Firma" ThisKey="firma_id" OtherKey="firma_id" Type="Firma" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dosya" Member="Dosyas">
+    <Type Name="Dosya">
+      <Column Name="staj_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dosya_adresi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Staj_Dosya" Member="Staj" ThisKey="staj_id" OtherKey="staj_id" Type="Staj" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Durum" Member="Durums">
+    <Type Name="Durum">
+      <Column Name="durum_id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="durum_mesaj" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Association Name="Durum_Staj" Member="Stajs" ThisKey="durum_id" OtherKey="durum_id" Type="Staj" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Firma" Member="Firmas">
+    <Type Name="Firma">
+      <Column Name="firma_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="adi" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="adresi" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="tel" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Firma_Yetkili" Member="Yetkilis" ThisKey="firma_id" OtherKey="firma_id" Type="Yetkili" />
+      <Association Name="Firma_Staj" Member="Stajs" ThisKey="firma_id" OtherKey="firma_id" Type="Staj" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Grup" Member="Grups">
+    <Type Name="Grup">
+      <Column Name="grup_id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="grup_isim" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Grup_Kullanici" Member="Kullanicis" ThisKey="grup_id" OtherKey="grup_id" Type="Kullanici" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kullanici" Member="Kullanicis">
+    <Type Name="Kullanici">
+      <Column Name="ogrenci_no" Type="System.String" DbType="NVarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="tc_no" Type="System.String" DbType="NVarChar(11) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="soyad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="eposta" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="sifre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="kayit_tarihi" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="kayit_durumu" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="grup_id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="bolum_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Kullanici_Staj" Member="Stajs" ThisKey="tc_no" OtherKey="tc_no" Type="Staj" />
+      <Association Name="Grup_Kullanici" Member="Grup" ThisKey="grup_id" OtherKey="grup_id" Type="Grup" IsForeignKey="true" />
+      <Association Name="Bolum_Kullanici" Member="Bolum" ThisKey="bolum_id" OtherKey="bolum_id" Type="Bolum" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staj" Member="Stajs">
+    <Type Name="Staj">
+      <Column Name="tc_no" Type="System.String" DbType="NVarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="staj_kodu" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="staj_baslangic" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="staj_bitis" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="staj_ctesi" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="firma_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="yetkili_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="staj_sonuc" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="staj_yorum" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sonuc_tarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="staj_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="durum_id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="calisan_eleman_sayisi" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="lisans_mezunu_personel_sayisi" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="bolumde_calisan_muhendis_sayisi" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="staj_ogrencisi_kontenjani" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="makine_parki" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sosyal_hizmetler" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="eklemek_istedikleriniz" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Staj_Dosya" Member="Dosyas" ThisKey="staj_id" OtherKey="staj_id" Type="Dosya" />
+      <Association Name="Durum_Staj" Member="Durum" ThisKey="durum_id" OtherKey="durum_id" Type="Durum" IsForeignKey="true" />
+      <Association Name="Firma_Staj" Member="Firma" ThisKey="firma_id" OtherKey="firma_id" Type="Firma" IsForeignKey="true" />
+      <Association Name="Kullanici_Staj" Member="Kullanici" ThisKey="tc_no" OtherKey="tc_no" Type="Kullanici" IsForeignKey="true" />
+      <Association Name="Yetkili_Staj" Member="Yetkili" ThisKey="yetkili_id" OtherKey="yetkili_id" Type="Yetkili" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tarih" Member="Tarihs">
+    <Type Name="Tarih">
+      <Column Name="tarih_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tarih" Member="tarih1" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

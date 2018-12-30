@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 10.625" name="veritabani">
+  <DataContextMoniker Name="/veritabaniDataContext" />
+  <nestedChildShapes>
+    <classShape Id="52ec70b8-2f68-43e2-8175-7d27efa71db3" absoluteBounds="0.75, 9.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/veritabaniDataContext/Bolum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d151b02-d463-4dbc-b5ed-8654dd074d80" absoluteBounds="0.765, 9.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="21c10d44-093b-40bc-9c80-cd96498380d2" absoluteBounds="3.5, 2.375, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/veritabaniDataContext/Yetkili" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b33a8d6a-c9cc-45d4-b82d-ea2d1e4f958a" absoluteBounds="3.515, 2.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4492bd95-9640-4fad-a9dc-5523b9d05a74" absoluteBounds="9, 2.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/veritabaniDataContext/Dosya" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f8e6ad2-2a35-468f-9790-b14a702238f8" absoluteBounds="9.015, 3.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2775988f-b3ad-4f33-a430-840774bbbd39" absoluteBounds="3.5, 5.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/veritabaniDataContext/Durum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="023656ec-133e-4503-938f-1edce03622e0" absoluteBounds="3.515, 5.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b69aac5b-c887-4b24-b21d-314b45642491" absoluteBounds="0.75, 2.5, 2, 1.578595377604167">
+      <DataClassMoniker Name="/veritabaniDataContext/Firma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d9749da-e9b8-4ca1-9428-d0ed1a0dc8da" absoluteBounds="0.765, 2.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4267c453-bb57-48fd-9d82-cba60c03216a" absoluteBounds="0.75, 7.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/veritabaniDataContext/Grup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c87740e-b813-4c16-85de-350baff3fb10" absoluteBounds="0.765, 7.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c3b8cc4-057c-4cf0-9843-c47e3379f430" absoluteBounds="3.5, 7.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/veritabaniDataContext/Kullanici" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7d62b68-2608-4722-8fe5-6926b363752c" absoluteBounds="3.515, 7.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5d63d6a-29fd-4ca9-9d26-7caa72986756" absoluteBounds="6.25, 1, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/veritabaniDataContext/Staj" />
+      <nestedChildShapes>
+        <elementListCompartment Id="565bc5e1-9c5c-4c3e-8890-0d1a0624336c" absoluteBounds="6.265, 1.46, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0674ef37-a71e-4fd4-97d0-fa8ec2f421ba" absoluteBounds="6.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/veritabaniDataContext/Tarih" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcf27f19-16e8-4b00-9ba7-0c058e4a3291" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.28929768880208); (3.5 : 3.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veritabaniDataContext/Firma/Firma_Yetkili" />
+      <nodes>
+        <classShapeMoniker Id="b69aac5b-c887-4b24-b21d-314b45642491" />
+        <classShapeMoniker Id="21c10d44-093b-40bc-9c80-cd96498380d2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.84699625651042); (3.5 : 7.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veritabaniDataContext/Grup/Grup_Kullanici" />
+      <nodes>
+        <classShapeMoniker Id="4267c453-bb57-48fd-9d82-cba60c03216a" />
+        <classShapeMoniker Id="9c3b8cc4-057c-4cf0-9843-c47e3379f430" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.61620198567708); (3.5 : 9.61620198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veritabaniDataContext/Bolum/Bolum_Kullanici" />
+      <nodes>
+        <classShapeMoniker Id="52ec70b8-2f68-43e2-8175-7d27efa71db3" />
+        <classShapeMoniker Id="9c3b8cc4-057c-4cf0-9843-c47e3379f430" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 3.22199625651042); (9 : 3.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veritabaniDataContext/Staj/Staj_Dosya" />
+      <nodes>
+        <classShapeMoniker Id="c5d63d6a-29fd-4ca9-9d26-7caa72986756" />
+        <classShapeMoniker Id="4492bd95-9640-4fad-a9dc-5523b9d05a74" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.9535551875); (6.38541666666667 : 5.9535551875 : JumpStart); (6.55208333333333 : 5.9535551875 : JumpEnd); (7.25 : 5.9535551875); (7.25 : 5.46311686197917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veritabaniDataContext/Durum/Durum_Staj" />
+      <nodes>
+        <classShapeMoniker Id="2775988f-b3ad-4f33-a430-840774bbbd39" />
+        <classShapeMoniker Id="c5d63d6a-29fd-4ca9-9d26-7caa72986756" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.07859537760417); (1.75 : 4.69794840494792); (6.25 : 4.69794840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veritabaniDataContext/Firma/Firma_Staj" />
+      <nodes>
+        <classShapeMoniker Id="b69aac5b-c887-4b24-b21d-314b45642491" />
+        <classShapeMoniker Id="c5d63d6a-29fd-4ca9-9d26-7caa72986756" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.0569482421875); (6.46875 : 9.0569482421875); (6.46875 : 5.46311686197917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veritabaniDataContext/Kullanici/Kullanici_Staj" />
+      <nodes>
+        <classShapeMoniker Id="9c3b8cc4-057c-4cf0-9843-c47e3379f430" />
+        <classShapeMoniker Id="c5d63d6a-29fd-4ca9-9d26-7caa72986756" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.26044840494792); (6.25 : 3.26044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veritabaniDataContext/Yetkili/Yetkili_Staj" />
+      <nodes>
+        <classShapeMoniker Id="21c10d44-093b-40bc-9c80-cd96498380d2" />
+        <classShapeMoniker Id="c5d63d6a-29fd-4ca9-9d26-7caa72986756" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

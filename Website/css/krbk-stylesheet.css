@@ -1,0 +1,105 @@
+<style>
+
+body
+{
+font-face:Times New Roman;
+font-size:15;
+
+}
+.form-control
+{
+	margin-top:10px;
+	margin-bottom:10px;
+	
+}
+#ana
+{
+width:800px;
+height:400px;
+background-color:#373547;
+margin:auto;
+margin-top:100px;
+}
+
+#giris
+{
+float:right;
+width:230px;
+height:300px;	
+background-color:#373547;
+margin-top:100px;
+margin-right:140px;
+} 	
+
+#ikon
+{
+float:left;
+width:400px;
+height:120px;	
+background-color:#373547;
+margin-top:-30px;
+margin-left:0px;
+
+}
+.label_kullanici_girisi
+{
+	color:#E5DFDF; 
+	font-size:13px;
+	margin-top:-4px;
+}
+#label_kullanici_girisi
+{
+	color:#E5DFDF; 
+	font-size:13px;
+	margin-top:35px;
+}
+.k_label_kullanici_girisi
+{
+	color:#E5DFDF; 
+	font-size:20px;
+	margin-top:35px;
+}
+.btn_kaydol
+{
+	width:105px;
+	font-size:11px;
+	height:38px;
+	color:#E5DFDF;
+	background-color:#EC148A;
+	margin-top:20px;
+	float:left;
+	
+}
+
+.btn_girisyap
+{
+	width:105px;
+	font-size:11px;
+	height:38px;
+	color:#E5DFDF;
+	background-color:#EC148A;
+	float:right;
+	margin-top:20px;
+
+}
+
+#sifremi_unuttum
+{
+	float:right;
+	margin-top:30px;
+	text-decoration:none;
+	font-size:12px;
+}
+
+#sifremiunuttum_giris
+{
+float:right;
+width:230px;
+height:300px;	
+background-color:#373547;
+margin-top:130px;
+margin-right:140px;
+} 	
+
+
+</style>
